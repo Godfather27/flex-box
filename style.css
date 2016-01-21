@@ -1,0 +1,122 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*  some additional preparing  */
+html, body{
+	height: 100%;
+}
+
+/*  FLEXBOXES <3  */
+.flex-container{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.flex-element{
+
+}
+
+.big{
+	order: 1;
+}
+.medium{
+	order: 2;
+}
+.small{
+	order: 3;
+}
+
+.make-me-pretty{
+	font-family: helvetica, arial, sans-serif;
+	font-weight: bold;
+	font-size: 1.5em;
+	color: white;
+	text-align: center;
+	box-sizing: border-box;
+	padding: 25px;
+	border: 1px solid #456789;
+	background: #9abcde;
+	width: 100%;
+}
+
+.some-sizing-stuff{
+	height: 100%;
+	box-sizing: border-box;
+	padding: 15px;
+}
+
+@media (min-width: 350px) {
+	.flex-container{
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.make-me-pretty{
+		text-align: initial;
+		width: initial;
+	}
+}
+@media (min-width: 1024px){
+	.flex-container{
+		justify-content: flex-start;
+	}
+	.big{
+		flex: 3;
+		order: initial;
+	}
+	.medium{
+		flex: 2;
+		order: initial;
+	}
+	.small{
+		flex: 1;
+		order: initial;
+	}
+}
